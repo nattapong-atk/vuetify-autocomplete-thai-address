@@ -26,9 +26,9 @@
           </v-col>
           <v-col :cols="6">
             <v-address-field
-              v-model="addressForm.provice"
+              v-model="addressForm.province"
               label="จังหวัด"
-              type="provice"
+              type="province"
               @select="onSelectAddress($event)" />
           </v-col>
           <v-col :cols="6">
@@ -47,7 +47,7 @@
               </h3>
               <p> subDistrict : {{ addressForm.subDistrict }}</p>
               <p> district : {{ addressForm.district }}</p>
-              <p> provice : {{ addressForm.provice }}</p>
+              <p> province : {{ addressForm.province }}</p>
               <p> postcode : {{ addressForm.postcode }}</p>
             </v-card>
           </v-col>
@@ -70,7 +70,7 @@ export default {
       addressForm: {
         subDistrict: '',
         district: '',
-        provice: '',
+        province: '',
         postcode: ''
       }
     }
@@ -79,7 +79,7 @@ export default {
     onSelectAddress (address) {
       this.addressForm.subDistrict = address?.subDistrict || ''
       this.addressForm.district = address?.district || ''
-      this.addressForm.provice = address?.provice || ''
+      this.addressForm.province = address?.province || ''
       this.addressForm.postcode = address?.postcode || ''
     }
   }

@@ -55,7 +55,7 @@ export default {
       validator: (type) => [
         'sub-district',
         'district',
-        'provice',
+        'province',
         'postcode'
       ].some((t) => t === type)
     },
@@ -96,7 +96,7 @@ export default {
       switch (this.type) {
         case 'sub-district': return 'district'
         case 'district': return 'amphoe'
-        case 'provice': return 'province'
+        case 'province': return 'province'
         case 'postcode': return 'zipcode'
         default: return null
       }
@@ -119,7 +119,7 @@ export default {
       this.$emit('select', {
         subDistrict: item?.district || '',
         district: item?.amphoe || '',
-        provice: item?.province || '',
+        province: item?.province || '',
         postcode: item?.zipcode || ''
       })
     }
