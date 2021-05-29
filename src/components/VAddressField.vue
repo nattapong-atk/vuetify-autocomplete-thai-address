@@ -14,7 +14,8 @@
         <v-list-item
           v-for="(item, index) in items"
           :key="index"
-          @click="clickSelectItem(item)">
+          @click="clickSelectItem(item)"
+          @keydown.enter="clickSelectItem(item)">
           <v-list-item-title>
             <span
               v-for="(text, i) in textTemplate"
